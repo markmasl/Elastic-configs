@@ -1,5 +1,5 @@
 {
-  "template" : "pa-traffic*",
+  "index_patterns" : "pa-traffic*",
   "version" : 1,
   "settings" : {
     "number_of_shards": 2,
