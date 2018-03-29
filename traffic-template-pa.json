@@ -1,0 +1,295 @@
+{
+  "template" : "traffic*",
+  "version" : 1,
+  "settings" : {
+    "number_of_shards": 2,
+    "number_of_replicas": 0,
+    "index.refresh_interval" : "5s"
+  },
+  "mappings" : {
+    "doc" : {
+        "properties" : {
+          "@timestamp" : {
+            "type" : "date"
+          },
+          "@version" : {
+            "type" : "byte"
+          },
+          "Action" : {
+            "type" : "keyword"
+          },
+          "ActionFlags" : {
+            "type" : "keyword"
+          },
+          "ActionSource" : {
+            "type" : "keyword"
+          },
+          "Application" : {
+            "type" : "keyword"
+          },
+          "Bytes" : {
+            "type" : "long"
+          },
+          "BytesReceived" : {
+            "type" : "long"
+          },
+          "BytesSent" : {
+            "type" : "long"
+          },
+          "DestinationIP" : { "type" : "ip" },
+          "DestinationIPGeo" : {
+            "properties" : {
+              "city_name" : {
+                "type" : "keyword"
+              },
+              "continent_code" : {
+                "type" : "keyword"
+              },
+              "country_code2" : {
+                "type" : "keyword"
+              },
+              "country_code3" : {
+                "type" : "keyword"
+              },
+              "country_name" : {
+                "type" : "keyword"
+              },
+              "dma_code" : {
+                "type" : "short"
+              },
+              "ip" : { "type" : "ip" },
+              "latitude" : {
+                "type" : "half_float"
+              },
+              "location" : { "type" : "geo_point" },
+              "longitude" : {
+                "type" : "half_float"
+              },
+              "postal_code" : {
+                "type" : "keyword"
+              },
+              "region_code" : {
+                "type" : "keyword"
+              },
+              "region_name" : {
+                "type" : "keyword"
+              },
+              "timezone" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "DestinationLocation" : {
+            "type" : "keyword"
+          },
+          "DestinationPort" : { "type" : "integer" },
+          "DestinationUser" : {
+            "type" : "keyword"
+          },
+          "DestinationVMUUID" : {
+            "type" : "keyword"
+          },
+          "DestinationZone" : {
+            "type" : "keyword"
+          },
+	  "DeviceGroupHierarchyLevel1" : {
+            "type" : "short"
+          },
+          "DeviceGroupHierarchyLevel2" : {
+            "type" : "short"
+          },
+          "DeviceGroupHierarchyLevel3" : {
+            "type" : "short"
+          },
+          "DeviceGroupHierarchyLevel4" : {
+            "type" : "short"
+          },
+          "DeviceName" : {
+            "type" : "keyword"
+          },
+          "ElapsedTime" : {
+            "type" : "long"
+          },
+          "FUTURE_USE" : {
+            "type" : "keyword"
+          },
+          "Flags" : {
+            "type" : "keyword"
+          },
+          "GeneratedTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "InboundInterface" : {
+            "type" : "keyword"
+          },
+          "LogForwardingProfile" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "MonitorTag_IMEI" : {
+            "type" : "keyword"
+          },
+          "NATDestinationIP" : { "type" : "ip" },
+          "NATDestinationPort" : {
+            "type" : "integer"
+          },
+          "NATSourceIP" : { "type" : "ip" },
+          "NATSourcePort" : {
+            "type" : "integer"
+          },
+          "OutboundInterface" : {
+            "type" : "keyword"
+          },
+          "Packets" : {
+            "type" : "long"
+          },
+          "PacketsReceived" : {
+            "type" : "long"
+          },
+          "PacketsSent" : {
+            "type" : "long"
+          },
+          "ParentSessionID" : {
+            "type" : "integer"
+          },
+          "ParentStartTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "Protocol" : {
+            "type" : "keyword"
+          },
+          "ReceiveTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "RepeatCount" : {
+            "type" : "long"
+          },
+          "RuleName" : {
+            "type" : "keyword"
+          },
+          "SequenceNumber" : {
+            "type" : "long"
+          },
+          "SerialNumber" : {
+            "type" : "keyword"
+          },
+          "SessionEndReason" : {
+            "type" : "keyword"
+          },
+          "SessionID" : {
+            "type" : "long"
+          },
+          "SourceIP" : { "type" : "ip" },
+          "SourceIPGeo" : {
+            "properties" : {
+              "city_name" : {
+                "type" : "keyword"
+              },
+              "continent_code" : {
+                "type" : "keyword"
+              },
+              "country_code2" : {
+                "type" : "keyword"
+              },
+              "country_code3" : {
+                "type" : "keyword"
+              },
+              "country_name" : {
+                "type" : "keyword"
+              },
+              "dma_code" : {
+                "type" : "short"
+              },
+              "ip" : { "type" : "ip" },
+              "latitude" : {
+                "type" : "half_float"
+              },
+              "location" : { "type" : "geo_point" },
+              "longitude" : {
+                "type" : "half_float"
+              },
+              "postal_code" : {
+                "type" : "keyword"
+              },
+              "region_code" : {
+                "type" : "keyword"
+              },
+              "region_name" : {
+                "type" : "keyword"
+              },
+              "timezone" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "SourceLocation" : {
+            "type" : "keyword"
+          },
+          "SourcePort" : {
+            "type" : "integer"
+          },
+          "SourceUser" : {
+            "type" : "keyword"
+          },
+          "SourceVMUUID" : {
+            "type" : "keyword"
+          },
+          "SourceZone" : {
+            "type" : "keyword"
+          },
+          "StartTime" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "Threat_ContentType" : {
+            "type" : "keyword"
+          },
+          "TimeLogged" : {
+            "type" : "date",
+            "format" : "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "TunnelID_IMSI" : {
+            "type" : "long"
+          },
+          "TunnelType" : {
+            "type" : "keyword"
+          },
+          "Type" : {
+            "type" : "keyword"
+          },
+          "URLCategory" : {
+            "type" : "keyword"
+          },
+          "VirtualSystem" : {
+            "type" : "keyword"
+          },
+          "VirtualSystemName" : {
+            "type" : "keyword"
+          },
+          "host" : {
+            "type" : "keyword"
+          },
+          "path" : {
+            "type" : "keyword"
+          },
+          "syslog_host" : {
+            "type" : "keyword"
+          },
+          "tags" : {
+            "type" : "keyword"
+          },
+          "type" : {
+            "type" : "keyword"
+          }
+		}
+	  }
+	}
+}
