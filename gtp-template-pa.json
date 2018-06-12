@@ -46,7 +46,7 @@
             "type" : "keyword"
           },
           "GTPEventCode": {
-            "type" : "long"
+            "type" : "keyword"
           },
           "GTPEventType": {
             "type" : "keyword"
