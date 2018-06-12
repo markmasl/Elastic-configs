@@ -1,0 +1,125 @@
+{
+  "index_patterns" : "pa-config*",
+  "version" : 1,
+  "settings" : {
+    "number_of_shards": 2,
+    "number_of_replicas": 0,
+    "index.refresh_interval" : "5s"
+  },
+    "mappings": {
+      "doc": {
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "@version": {
+            "type" : "byte"
+          },
+          "ActionFlags": {
+            "type" : "keyword"
+          },
+          "Admin": {
+            "type" : "keyword"
+          },
+          "AfterChangeDetail": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "BeforeChangeDetail": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "Client": {
+            "type" : "keyword"
+          },
+          "Command": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "ConfigurationPath": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "DeviceGroupHierarchyLevel1": {
+            "type" : "keyword"
+          },
+          "DeviceGroupHierarchyLevel2": {
+            "type" : "keyword"
+          },
+          "DeviceGroupHierarchyLevel4": {
+            "type" : "keyword"
+          },
+          "FUTURE_USE": {
+            "type" : "keyword"
+          },
+          "GeneratedTime": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "Host": {
+            "type" : "keyword"
+          },
+          "ReceiveTime": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "Result": {
+            "type" : "keyword"
+          },
+          "SequenceNumber": {
+            "type" : "long"
+          },
+          "SerialNumber": {
+            "type" : "long"
+          },
+          "Subtype": {
+            "type" : "keyword"
+          },
+          "Type": {
+            "type" : "keyword"
+          },
+          "facility": {
+            "type": "long"
+          },
+          "facility_label": {
+            "type" : "keyword"
+          },
+          "host": {
+            "type" : "keyword"
+          },
+          "logsource": {
+            "type" : "keyword"
+          },
+          "priority": {
+            "type": "long"
+          },
+          "severity": {
+            "type": "long"
+          },
+          "severity_label": {
+            "type" : "keyword"
+        }
+      }
+    }
+  }
+}
