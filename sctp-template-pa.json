@@ -117,7 +117,7 @@
             "type" : "keyword"
           },
           "SequenceNumber": {
-            "type" : "long"
+            "type" : "keyword"
           },
           "SerialNumber": {
             "type" : "long"
