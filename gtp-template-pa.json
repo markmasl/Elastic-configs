@@ -28,7 +28,7 @@
             "type" : "keyword"
           },
           "CellID": {
-            "type" : "long"
+            "type" : "keyword"
           },
           "DestinationAddress":  { "type" : "ip" },
           "DestinationLocation": {
