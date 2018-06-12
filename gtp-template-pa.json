@@ -112,8 +112,8 @@
           "SourceZone": {
             "type" : "keyword"
           },
-          "TunnelEndpointIdentifier1":{ "type" : "integer" },
-          "TunnelEndpointIdentifier2":{ "type" : "integer" },
+          "TunnelEndpointIdentifier1":{ "type" : "keyword" },
+          "TunnelEndpointIdentifier2":{ "type" : "keyword" },
           "TunnelID_IMSI":{
             "type" : "long"
           },
