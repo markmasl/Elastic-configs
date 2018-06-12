@@ -1,1 +1,154 @@
-
+{
+  "index_patterns" : "pa-gtp*",
+  "version" : 1,
+  "settings" : {
+    "number_of_shards": 2,
+    "number_of_replicas": 0,
+    "index.refresh_interval" : "5s"
+  },
+    "mappings": {
+      "doc": {
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "@version": {
+            "type" : "byte"
+          },
+          "AccessPointName": {
+            "type" : "keyword"
+          },
+          "Action": {
+            "type" : "keyword"
+          },
+          "Application": {
+            "type" : "keyword"
+          },
+          "AreaCode": {
+            "type" : "keyword"
+          },
+          "CellID": {
+            "type" : "long"
+          },
+          "DestinationAddress":  { "type" : "ip" },
+          "DestinationLocation": {
+            "type" : "keyword"
+          },
+          "DestinationPort": { "type" : "integer" },
+          "DestinationZone": {
+            "type" : "keyword"
+          },
+          "EndUserIPAddress": { "type" : "ip" },
+          "FUTURE_USE": {
+            "type" : "keyword"
+          },
+          "GTPCause": {
+            "type" : "keyword"
+          },
+          "GTPEventCode": {
+            "type" : "long"
+          },
+          "GTPEventType": {
+            "type" : "keyword"
+          },
+          "GTPInterface": {
+            "type" : "keyword"
+          },
+          "GTPMessage Type": {
+            "type" : "keyword"
+          },
+          "GeneratedTime": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "InboundInterface": {
+            "type" : "keyword"
+          },
+          "LogAction": {
+            "type" : "keyword"
+          },
+          "MSISDN": {
+            "type" : "long"
+          },
+          "MonitorTag_IMEI": {
+            "type" : "long"
+          },
+          "OutboundInterface": {
+            "type" : "keyword"
+          },
+          "Protocol": {
+            "type" : "keyword"
+          },
+          "RadioAccessTechnology":{
+            "type" : "keyword"
+          },
+          "ReceiveTime": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "RuleName": {
+            "type" : "keyword"
+          },
+          "SerialNumber": {
+            "type" : "long"
+          },
+          "ServingCountryMCC": {
+            "type" : "long"
+          },
+          "ServingNetworkMNC": {
+            "type" : "long"
+          },
+          "SessionID": {
+            "type" : "long"
+          },
+          "Severity": {
+            "type" : "keyword"
+          },
+          "SourceAddress":   { "type" : "ip" },
+          "SourceLocation":{
+            "type" : "keyword"
+          },
+          "SourcePort":{ "type" : "integer" },
+          "SourceZone": {
+            "type" : "keyword"
+          },
+          "TunnelEndpointIdentifier1":{ "type" : "integer" },
+          "TunnelEndpointIdentifier2":{ "type" : "integer" },
+          "TunnelID_IMSI":{
+            "type" : "long"
+          },
+          "VirtualSystem":{
+            "type" : "keyword"
+          },
+          "column78": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "column79": {
+            "type" : "keyword"
+          },
+          "facility": {
+            "type": "long"
+          },
+          "facility_label": {
+            "type" : "keyword"
+          },
+          "host": {
+            "type" : "keyword"
+          },
+          "logsource":{
+            "type" : "keyword"
+          },
+          "priority": {
+            "type": "long"
+          },
+          "severity": {
+            "type": "long"
+          },
+          "severity_label": {
+            "type" : "keyword"
+          }
+        }
+      }
+    }
+  }
