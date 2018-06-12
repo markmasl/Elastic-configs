@@ -1,1 +1,172 @@
+{
+  "index_patterns" : "pa-sctp*",
+  "version" : 1,
+  "settings" : {
+    "number_of_shards": 2,
+    "number_of_replicas": 0,
+    "index.refresh_interval" : "5s"
+  },
+    "mappings": {
+      "doc": {
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "@version": {
+            "type" : "byte"
+          },
 
+          "Action": {
+            "type" : "keyword"
+          },
+          "DestinationAddress":{ "type" : "ip" },
+          "DestinationPort": { "type" : "integer" },
+          "DestinationZone": {
+            "type" : "keyword"
+          },
+          "DeviceGroupHierarchyLevel1":{
+            "type" : "keyword"
+          },
+          "DeviceGroupHierarchyLevel2":{
+            "type" : "keyword"
+          },
+          "DeviceGroupHierarchyLevel3":{
+            "type" : "keyword"
+          },
+          "DeviceName":{
+            "type" : "keyword"
+          },
+          "FUTURE_USE":{
+            "type" : "keyword"
+          },
+          "GeneratedTime": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "IPProtocol":{
+            "type" : "keyword"
+          },
+          "InboundInterface":{
+            "type" : "keyword"
+          },
+          "LogAction":{
+            "type" : "keyword"
+          },
+          "OpCode":{
+            "type" : "keyword"
+          },
+          "OutboundInterface": {
+            "type" : "keyword"
+          },
+          "Packets": {
+            "type" : "long"
+          },
+          "PacketsReceived":{
+            "type" : "long"
+          },
+          "PacketsSent":{
+            "type" : "long"
+          },
+          "PayloadProtocolID": {
+            "type" : "keyword"
+          },
+          "ReceiveTime": {
+            "type": "date",
+            "format": "yyyy/MM/dd HH:mm:ss||yyyy/MM/dd||epoch_millis"
+          },
+          "RepeatCount": {
+            "type" : "long"
+          },
+          "RuleName": {
+            "type" : "keyword"
+          },
+          "SCCPCalliPartyGlobalTitle":  {
+            "type" : "keyword"
+          },
+          "SCCPCallingPartySSN": {
+            "type" : "keyword"
+          },
+          "SCTPAssociationEndReason": {
+            "type" : "keyword"
+          },
+          "SCTPAssociationID": {
+            "type" : "keyword"
+          },
+          "SCTPChunkType": {
+            "type" : "keyword"
+          },
+          "SCTPChunks": {
+            "type" : "long"
+          },
+          "SCTPChunksReceived": {
+            "type" : "long"
+          },
+          "SCTPChunksSent": {
+            "type" : "long"
+          },
+          "SCTPFilter": {
+            "type" : "keyword"
+          },
+          "SCTPStreamID": {
+            "type" : "long"
+          },
+          "SCTPVerificationTag1": {
+            "type" : "keyword"
+          },
+          "SCTPVerificationTag2": {
+            "type" : "keyword"
+          },
+          "SequenceNumber": {
+            "type" : "long"
+          },
+          "SerialNumber": {
+            "type" : "long"
+          },
+          "SessionID": {
+            "type" : "long"
+          },
+          "Severity": {
+            "type" : "keyword"
+          },
+          "SourceAddress":{ "type" : "ip" },
+          "SourcePort": { "type" : "integer" },
+          "SourceZone": {
+            "type" : "keyword"
+          },
+          "VirtualSystem": {
+            "type" : "keyword"
+          },
+          "VirtualSystemName": {
+            "type" : "keyword"
+          },
+          "facility": {
+            "type": "long"
+          },
+          "facility_label": {
+            "type" : "keyword"
+          },
+          "host":  {
+            "type" : "keyword"
+          },
+          "logsource": {
+            "type" : "keyword"
+          },
+          "priority": {
+            "type": "long"
+          },
+          "severity": {
+            "type": "long"
+          },
+          "severity_label": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          }
+        }
+      }
+    }
+  }
